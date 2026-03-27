@@ -65,8 +65,8 @@ export function SettingsForm() {
           <span className="text-sm font-medium text-zinc-800">Percorso file Excel</span>
           <input
             {...register("excelFilePath")}
-            className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm"
-            placeholder="manutenzioni-italy.xlsx"
+            className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm text-zinc-600"
+            placeholder="data/manutenzioni-italy.xlsx"
           />
         </label>
 
@@ -74,7 +74,7 @@ export function SettingsForm() {
           <span className="text-sm font-medium text-zinc-800">Nome foglio</span>
           <input
             {...register("sheetName")}
-            className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm"
+            className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm text-zinc-600"
             placeholder="Scadenze"
           />
         </label>

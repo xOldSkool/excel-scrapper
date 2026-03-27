@@ -8,7 +8,7 @@ export type AppSettings = {
 };
 
 export const DEFAULT_SETTINGS: AppSettings = {
-  excelFilePath: "manutenzioni-italy.xlsx",
+  excelFilePath: "data/manutenzioni-italy.xlsx",
   sheetName: "Scadenze",
 };
 

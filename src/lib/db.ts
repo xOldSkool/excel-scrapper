@@ -21,7 +21,7 @@ import {
   type SettingsUpdatePayload,
 } from "@/types/settings.types";
 
-const SETTINGS_PATH = path.join(/* turbopackIgnore: true */ process.cwd(), "work", "app-settings.json");
+const SETTINGS_PATH = path.join(/* turbopackIgnore: true */ process.cwd(), "data", "app-settings.json");
 
 /**
  * Restituisce il percorso assoluto del file Excel in base al valore salvato nelle impostazioni.
@@ -157,10 +157,10 @@ function normalizeSheetRow(
 }
 
 /**
- * Garantisce che la directory di work esista prima di salvare impostazioni o altri file applicativi.
+ * Garantisce che la directory data esista prima di salvare impostazioni o altri file applicativi.
  */
-async function ensureWorkDirectory(): Promise<void> {
-  await mkdir(path.join(/* turbopackIgnore: true */ process.cwd(), "work"), { recursive: true });
+async function ensureDataDirectory(): Promise<void> {
+  await mkdir(path.join(/* turbopackIgnore: true */ process.cwd(), "data"), { recursive: true });
 }
 
 /**
@@ -184,7 +184,7 @@ export async function readSettings(): Promise<AppSettings> {
  * Salva le impostazioni applicative su file locale per renderle persistenti tra i riavvii.
  */
 export async function writeSettings(settings: SettingsUpdatePayload): Promise<AppSettings> {
-  await ensureWorkDirectory();
+  await ensureDataDirectory();
 
   const normalizedSettings: AppSettings = {
     excelFilePath: settings.excelFilePath.trim(),
