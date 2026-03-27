@@ -47,7 +47,7 @@ Assicurati di avere:
 
 Esegui nel terminale:
 
-`git clone URL_REPOSITORY`
+`git clone https://github.com/xOldSkool/excel-scrapper.git`
 
 `cd excel-scrapper`
 
