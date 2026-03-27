@@ -47,16 +47,17 @@ Assicurati di avere:
 
 Esegui nel terminale:
 
-git clone URL_REPOSITORY
-cd excel-scrapper
+`git clone URL_REPOSITORY`
+
+`cd excel-scrapper`
 
 ### 3. Installa le dipendenze
 
-npm install
+`npm install`
 
 ### 4. Avvia il progetto in sviluppo
 
-npm run dev
+`npm run dev`
 
 Poi apri nel browser:
 
